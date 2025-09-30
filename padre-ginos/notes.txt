@@ -1,0 +1,202 @@
+Questions and Answers
+
+1) What are the two key React packages when working in a browser?
+A: React and React-DOM. React handles universal interface, ReactDOM handles browser rendering.
+
+2) What does UMD stand for in the context of loading React pacakges?
+A: Universal Module Definition
+
+3) What method is used to create a root for rendering a React application?
+A: ReactDOM.createRoot() or ReactDOM.createRoot().render()
+
+4) How can you create an HTML5 document quickly in VS Code?
+A: An Emmet shortcut, typing: 'html:5' and press Tab
+
+5) What is the primary purpose of React.createElement?
+A: To create and stamp out a reusable component instance, similar to creating a stamp that can be used multiple times. Creates a JavaScript object representing a UI element.
+
+6) How can you create a basic React component without using JSX?
+A: Use React.createElement(type, props, children);
+
+7) What is the primary purpose of ReactDOM.createRoot()?
+A: Prepare a DOM container for React rendering.
+
+8) How can you return multiple top-level React components?
+A: You can return multiple top-level components using an array or by passing multiple parameters to React.createElement function.
+
+9) What are props in React?
+A: Props are properties, a way to pass data and configuration to a React component, allowing components to be more flexible and resuable.
+
+10) What happens when React renders a string versus a function?
+A: When a string is rendered, it outputs that string directly to the DOM as a node. When a function or React component is rendered, React attempts to execute and render that function.
+
+11) What is the key concept behind React's component design?
+A: React combines the model, view, and view-model into a single component, encapsulating all logic for a small piece of functionality in one place.
+
+12) How can you pass additional information to a React component?
+A: You can pass additional information to a React component by providing an object with properties when creating the element, which can then be accessed via the props parameter in the component function.
+
+13) What does npm do?
+A: npm is the package manager for Node.js that allows installation of packages from the npm registry, manages project dependencies, and enables commands like `npm run` and `npm install`.
+
+14) What is Prettier and what does it do?
+A: Prettier is a code formatter that automatically formats unformatted code into a consistent, uniform style, removing the need for manual code formatting.
+
+15) What is the purpose of creating a .prettierrc file?
+A: The `.prettierrc` file configures Prettier's formatting settings. An empty object, `{}`, means using all default formatting rules.
+
+16) What does the `npm init -y` command do?
+A: The command quickly generates a package.json file without prompting for input, allowing you to start saving project dependencies.
+
+17) What is the benefit of using a package manager like npm?
+A: Package managers like npm help manage project dependencies, ensuring consistent package versions, enable easy package installation, and facilitate security updates for packages.
+
+18) What does the `-D` flag do when running `npm install`?
+A: Installs a package as a development dependency.
+
+19) What is the key difference between ESLint and Prettier?
+A: ESLint focuses on semantics, syntax, and code content with enforced rules, while Prettier is soley about code formatting and white space placement.
+
+20) What is the purpose of adding browser and node globals in an ESLint configuration?
+A: Adding browser and node globals allows ESLint to recognize and validate global objects like 'window' or 'document' without triggering undefined variable warnings.
+
+21) Why is the Prettier configuration always placed last in an ESLint configuration array?
+A: The Prettier configuration is always placed last because it only turns off formatting checks and does not add any new rules, preventing ESLint from yelling about formatting issues.
+
+22) What does the `--fix` flag do when running ESLint?
+A: It automatically corrects certain linting error that can be fixed programmatically, transforming code to meet linting standards.
+
+23) What is the recommended ESLint configuration for most projects?
+A: The `.configs.recommended` configuration provides a small subset of non-controversial ESLint rules that are purely value-adding and generally safe to use.
+
+24) What is the purpose of adding `.DS_Store` to a gitignore file?
+A: It's an auto-generated file by Mac OS that tracks file positioning in Mac OS windows, and should be ignored to prevent unnecessary tracking in version control.
+
+25) Why should 'node_modules' be added to a gitignore file?
+A: It should be ignored because they can be reinstalled via `npm install` and don't need to be tracked in version control.
+
+26) Which command is used to initialize a new Git repository?
+A: `git init`
+
+27) What is the purpose of an .env file in a project?
+A: A .env file typically contains environment-specific configuration and sensitive information, and should be ignored in version control for security reasons.
+
+28) What is the primary purpose of a .gitignore file?
+A: To specify files and directories that Git should not track.
+
+29) What is Vite's underlying bundler?
+A: Rollup, with plans to transition to Rolldown (a Rust-based bundler for JavaScript)
+
+30) What are the two minimum requirements to get started with Vite?
+A: vite@5.4.2 and @vitejs/plugin-react (?? - ES Modules)
+
+31) Which attribute must be added to the script tag in `index.html` when using Vite?
+A: `type="module"`
+
+32) Which three commands are typically added to the `package.json` scripts section for Vite?
+A: dev (runs development server), build (creates production assets), preview (serves production build locally)
+
+33) What is the specific import path for createRoote in React 18?
+A: react-dom/client: `import { createRoot } from "react-dom/client"`
+
+34) What is the primary function of Vite in an web development project?
+A: Simplify module bundling and improve developer experience.
+
+35) What does the Vite command 'preview' primarily help developers do?
+A: Test production-like builds locally.
+
+36) When importing React modules in a Vite project, what is the difference between default and named imports?
+A: Default imports import entire library, named imports target specific functions.
+
+37) What is the purpose of using curly braces `{}` in JSX?
+A: Curly braces allow you to embed any JavaScript expression within JSX, such as calling methods on props or inserting dynamic values.
+
+38) Why is `className` used instead of `class` in JSX?
+A: The word `class` is a reserved keyword in JavaScript for defining classes, so React uses `className` to avoid syntax conflicts and align with the JavaScript DOM API's naming convention.
+
+39) What is the difference between default and named exports in JavaScript modules?
+A: A default export can be imported without curly braces and is typically used for a single primary export per file, while named exports require curly braces and allow multiple exports from the same file.
+
+40) What transformation happens when writing JSX?
+A: JSX is transformed into `React.createElement()` calls during the build process, effectively creating a thin layer on top of JavaScript that allows writing HTML-like syntax in JavaScript.
+
+41) What is the recommended syntax for returning JSX in a component?
+A: Use parentheses `()` when returning JSX to ensure proper line breaks and readability, allowing multi-line JSX without additonal syntax complications.
+
+42) What is the primary purpose of using JSX in React?
+A: To create a more readable and intuitive HTML-like syntax within JavaScript.
+
+43) In modern React development, do you still need to import React when using JSX?
+A: No, modern build tools automatically import React.
+
+44) In JSX, what is the difference between lowercase and Uppercase component names?
+A: Lowercase names, like `h1`, represent standard DOM tags, while Uppercase names, like `Pizza`, represent custom React components. Uppercase naming is required by React tools and helps distinguish between native DOM elements and user-created components.
+
+45) What special consideration must be made for self-closing tags in JSX?
+A: In JSX, self-closing tags must explicitly include the close slash, even if HTML would consider it invalid. This is a strict requirement of JSX to help keep track of tags.
+
+46) What special keyword in JSX must be replaced when working with form labels?
+A: The 'for' attribute must be replaced with 'htmlFor' in JSX, which helps disambiguate it from JavaScript's reserved 'for' loop keyword.
+
+47) What does setting `react:version` to `detect` do in ESLint configuration?
+A: Allows ESLint to automatically determine the React version from the package.json file, enabling verison-specific linting rules.
+
+48) What two default React ESLint rules are commonly turned off?
+A: `no-unescaped-entities` and `react/prop-types` are frequently disabled. The first requires manually escaping special characters and the second is considered less useful since the rise of TypeScript.
+
+49) What is the purpose of the 'jsx-runtime' configuration in ESLint?
+A: To resolve errors related to React import requirements.
+
+50) What technology is being used to create the API server in this project?
+A: Fastify Node.js App with SQLite database. // LOOK INTO This
+
+51) What is the purpose of adding a proxy configuration in the Vite config file?
+A: To run the frontend and backend on the same port and avoid CORS issues by proxying API and public requests to localhost:3000
+
+52) In the Vite proxy configuration, what are the two routes being configured?
+A: `/api` and `/public` are being configured to localhost:3000
+
+53) What port does Vite development server run on?
+A: Port 5173
+
+54) What port does the API server run on?
+A: Port 3000
+
+55) What is the purpose of using the 'webp' image file format?
+A: WebP is a more efficient image format developed by Google that provides better compression compared to JPEG or PNG, resulting in smaller file sizes while maintaining image quality.
+
+56) When adding an image in React, which two key attributes should be included in an `<img>` tag?
+A: The `src` attribute to specify the image source path, and the `alt` attribute to provide alternative text for accessibility and description.
+
+57) What commands needs to be run in two separate terminals to start a React development environment?
+A: Run the API server using `npm run dev` or `npm start` and run the Vite server using `npm run dev` in the project directory.
+
+58) Where are static assets like images typically stored in a React/Vite project?
+A: In the 'public' directory, which makes files directly accessible and available for referencing in the application.
+
+59) How do you add a CSS stylesheet link in an 'index.html' file?
+A: Use a `<link>` tag with `rel="stylesheet"` and `href` pointing to the stylesheet path, such as `/public/style.css`.
+
+60) What is the primary purpose of Hooks in React?
+A: Hooks are used to introduce interactivity, side effects, or additional functionality to React components.
+
+61) Why is it important to keep the function body of a React component performant?
+A: Because the function body gets run multiple times during rendering, and heavy computations can cause performance issues and "jank" in the user interface.
+
+62) What is a key consideration when handling variables or effects in a React component's render path?
+A: Ensure that the component always produces the same markup given the same inputs, regardless of when it is rendered.
+
+63) What is the difference between using an arrow function an a named function for a React component?
+A: A named function will show up in stack traces during debugging, making it easier to identify the source of errors.
+
+64) What is the purpose of the 'value' attribute in a form input element in React?
+A: The 'value' attribute sets the current value of the input element to match the component's state, enabling controlled form inputs.
+
+65) In the context of form handling, what is a common pattern for managing form state in React?
+A: Using state variables to track form input values.
+
+66) What is the main characteristic of two-way data binding in React?
+A: Two-way data binding is not free in React. Components do not automatically update when user interactions occur, requiring explicit state management to reflect changes.
+
+67) What is a hook in React, and what is the most common hook?
+A: A hook is a special function in React that allows functional components to use state and other React features. `useState` is the most common hook, which returns an array with the current state value and a function to update that state.
