@@ -200,3 +200,55 @@ A: Two-way data binding is not free in React. Components do not automatically up
 
 67) What is a hook in React, and what is the most common hook?
 A: A hook is a special function in React that allows functional components to use state and other React features. `useState` is the most common hook, which returns an array with the current state value and a function to update that state.
+
+68) What are the key rules for using hooks in React?
+A: Hooks must be called in the same order every time and cannot be placed inside conditionals, loops, or other control structures. They should always be called at the top level of a component.
+
+69) How does `useState` work when declaring state in a React component?
+A: `useState` is called with a default value and returns an array with two elements: the current state value and a setter function to update that state. Structure is: `const [value, setValue] = useState(defaultValue)`
+
+70) What is the purpose of the `onChange` even handler in React form elements?
+A: The `onChange` even handler allows updating the component's state when a user interacts with a form element, triggering a re-render and ensuring the component's state reflects the user's input.
+
+71) What happens when a state is updated using a setter function in React?
+A: The component re-renders with the new state value.
+
+72) Why does React recommend explicit event handlers on form elements?
+A: To improve accessibility for screen readers.
+
+73) Internationalization API.
+A: The Internationalization API is available in all browsers and provides language-sensitive string comparison, number formatting, date and time formatting, etc. Example useage:
+`const intl = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});`
+
+74) What is the purpose of the `useEffect` hook in React?
+A: The `useEffect` hook is used for handling side effects in React components, such as API requests, setting up timers, or performing actions that occur outside the normal render cycle. It allows you to execute code at specific points in a component's lifecycle, like when the component first loads or when certain dependencies change.
+
+75) How do you ensure a `useEffect` hook runs only once when a component mounts?
+A: By passing an empty array as the second argument to the hook, your instruct React to run the effect only once when the component first mounts and never run it again. This prevents unnecessary re-renders or repeated API calls.
+
+76) Why can't you directly make a `useEffect` callback an async function?
+A: Async functions always return a Promise, but `useEffect` expects its callback to either return `undefined` or a cleanup function. To use an async function within `useEffect`, you should define a separate async function inside the effect and then call it.
+
+77) What is derivative state in React?
+A: Derivative state refers to state values that can be calculated directly from other state or props, and therefore do not need to be managed as a separate state using hooks. These values can be computed using normal variables or functions based on exisiting state.
+
+78) How does the `map()` function work when transforming arrays in React?
+A: The `map()` function transforms an array by applying a given function to each element, creating a new array. In React, it is commonly used to convert an array of data objects into an array of React elements or components, which can be directly rendered in JSX.
+
+79) What does the ternary operator allow you to do in React?
+A: The ternery operator allows you to write conditional expressions within JSX, enabling inline conditional rendering.
+
+80) What happens if you omit the dependency array in a `useEffect` hook?
+A: If you omit the dependency array, the effect will run on every render, potentially causing unnecessary re-renders and multiple API calls. This can lead to performance issues and unintended side effects.
+
+81) What is the purpose of tracking dependencies in a `useEffect` hook?
+A: Tracking dependencies helps control when the effect should be re-run. By specifying the state variables or props that the effect depends on, you can ensure the effect only runs when those specific values change.
+
+82) How can you create an artificial delay using JavaScript?
+A: You can create an artificial delay by creating a new Promise that resolves after a specified time using methods like `new Promise((resolve) => setTimeout(resolve, milliseconds))`.
+
+83) What is the difference between an expression and a statement in JavaScript?
+A: An expression is a piece of code that produces a value and can be part of a line, while a statement is a complete line of code that performs an action. Ternary operators are expressions because they return a value.
