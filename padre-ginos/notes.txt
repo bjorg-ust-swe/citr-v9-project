@@ -252,3 +252,34 @@ A: You can create an artificial delay by creating a new Promise that resolves af
 
 83) What is the difference between an expression and a statement in JavaScript?
 A: An expression is a piece of code that produces a value and can be part of a line, while a statement is a complete line of code that performs an action. Ternary operators are expressions because they return a value.
+
+84) What is the purpose of the `key` prop in React when rendering lists?
+A: The `key` prop helps React identify which items have changed, been added, or been removed in a list. It allows React to efficiently update the DOM by swapping components instead of tearing down and rebuilding everything from scratch.
+
+85) Why is using the array index as a `key` prop considered problematic?
+A: Array index is unstable because the index does not have a stable relationship with the project. If items are reordered, the index changes, causing React to incorrectly manage component updates and potentially leading to rendering issues.
+
+86) What makes a good unique indentifier for a `key` prop?
+A: A good unique identifier for a `key` prop is a stable, unique property of the object, such as an ID. This ensures that React can correctly track and update components even if their position in the list changes.
+
+87) What happens when React cannot determine a unique key for list items?
+A: React will warn developers in the console and may inefficiently re-render components by tearing down and rebuilding them completely, which can impact performance.
+
+88) In what scenarios might you not need a strictly unique key?
+A: In some cases where list items won't be reordered or the list is static, using an index as a key might be acceptable, though it is still not recommended as a best practice.
+
+89) What is NODE_ENV used for in web development?
+A: NODE_ENV indicates whether the application is running in development or production mode, which effects things like performance, error messages, and executable size in React.
+
+90) What is React Strict Mode and what does it do?
+A: React Strict Mode is an extra set of checks that warns developers about using deprecated features, double renders components, and helps catch subtle bugs by running effects twice.
+
+91) What functionality do React DevTools provide?
+A: React DevTools allow developers to inspect components, view component hierarchy, examine props and hooks, edit component state directly, and profile performance using a flame graph.
+
+92) How can developers use the React DevTools Components tab?
+A: Developers can view the components hierarchy, inspect props and hooks, and directly edit component state for debugging purposes.
+
+93) What performance advice does the instructor provide for React development?
+A: Write React code without prematurely optimizing performance, and only introduce performance enhancements when specific problems arise, as performance optimizations can make code harder to read and debug.
+
