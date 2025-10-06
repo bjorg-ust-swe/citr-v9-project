@@ -283,3 +283,30 @@ A: Developers can view the components hierarchy, inspect props and hooks, and di
 93) What performance advice does the instructor provide for React development?
 A: Write React code without prematurely optimizing performance, and only introduce performance enhancements when specific problems arise, as performance optimizations can make code harder to read and debug.
 
+94) What is a custom hook in React?
+A: A custom hook is simply a function that calls other hooks, allowing you to encapsulate and reuse stateful logic across multiple components.
+
+95) How do custom hooks differ from regular functions?
+A: Custom hooks call other React hooks and follow the rules of hooks, such as being called in the same order and not being placed inside conditional statements or loops.
+
+96) What is the primary benefit of creating a custom hook?
+A: Custom hooks enable reusable, composable logic that can be shared across different components, reducing code duplication and improving modularity.
+Note: In software, "composable" means "a system is built from smaller, independent, and interchangeable modules or 'building blocks' that can be combined to create more complex applications or functionalities.
+
+97) Which React hooks are typically used when creating a custom hook?
+A: Custom hooks commonly use `useState` and `useEffect` to manage state and side effects within the hook's logic.
+
+98) What naming convention is typically used for custom hooks?
+A: Custom hooks usually start with the prefix `use`, which indicates that it is a hook and follows React's hook naming convention.
+
+99) What are the two constrasting opinions on where to place effects in React?
+A: One extreme believes effects should never be in a component and always in custom hooks for easier testing. The opposite extreme suggests always keeping effects within components.
+
+100) Why do developers typically start creating custom hooks?
+A: When a piece of logic is repeated three times, it becomes a good candidate for extracting into a reusable custom hook that can be tested in isolation.
+
+101) What happens during the first render when using a custom hook that makes an asychronous API call?
+A: The first render will return the default value of the custom hook. ONce the effect runs and the API call completes, the component will re-render with the actual data.
+
+102) Why are custom hooks typically named with a lowercase first letter?
+A: Custom hooks are not components, so they do not follow the uppercase naming convention. Only React components are typically named with an uppercase first letter.
