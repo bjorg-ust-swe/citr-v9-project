@@ -310,3 +310,23 @@ A: The first render will return the default value of the custom hook. ONce the e
 
 102) Why are custom hooks typically named with a lowercase first letter?
 A: Custom hooks are not components, so they do not follow the uppercase naming convention. Only React components are typically named with an uppercase first letter.
+
+103) What is the primary purpose of the `useDebugValue` hook in React?
+A: To provide additional debugging information for custom hooks in React DevTools, allowing developers to see hook values at a glance, particularly useful in large codebases with multiple custom hooks.
+
+104) How does `useDebugValue` behave in production mode?
+A: It does not log or display any information, making it safe for use without impacting production performance.
+
+105) What type of information can be displayed using `useDebugValue`?
+A: Any JavaScript value or formatted string that provides meaningful insight into the hook's current state, such as object properties like ID, name, or description.
+
+106) Can multiple `useDebugValue` calls be used in a single custom hook?
+A: Yes, multiple calls can be used and will display an array of debug values in React DevTools.
+
+107) What is a recommended best practice when using `useDebugValue`?
+A: Use sparingly and focus on displaying concise, readable information that helps quickly identify the state or context of a custom hook.
+
+108) What method is used to prevent a form from submitting and refreshing the page?
+A: `event.preventDefault()`
+
+109)
