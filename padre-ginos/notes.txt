@@ -329,4 +329,52 @@ A: Use sparingly and focus on displaying concise, readable information that help
 108) What method is used to prevent a form from submitting and refreshing the page?
 A: `event.preventDefault()`
 
-109)
+109) What is the spread operator used for when adding an item to an array?
+A: The spread operator (...) is used to create a new array by spreading the existing array's elements and adding a new element at the end.
+
+110) Why is `onSubmit` preferred over an `onClick` for form handling?
+A: `onSubmit` handles both mouse clicks and keyboard events, like pressing Enter, and provides better accessibility for screen readers and form elements.
+
+111) What is the key concept of data flow in React components?
+A: One-way data flow, where data only flows down from parent to child components and cannot be directly modified by child components.
+
+112) What is the difference between props and state in React?
+A: Props are immutable data passed from parent to child components, while state is mutable data that a component can modify internally.
+
+113) How can a child component affect its parent's data?
+A: By passing a function from the parent to the child, which the child can call to modify the parent's state.
+
+114) What is the purpose of using `JSON.stringify()` when sending data via fetch?
+A: To convert a JavaScript object into a JSON string for transmission.
+
+115) What is a key advantage of React's component encapsulation?
+A: Easier debugging by localizing potential issues within specific components.
+
+116) What is context in React and when is it most appropriately used?
+A: Context is a way to pass data through the component tree without passing props manually at every level. It is most appropriately used for app-level state that affects multiple components, such as user authentication, theme settings, or global configuration.
+
+117) What is the "prop drilling problem" in React?
+A: Prop drilling occurs when data is passed through multiple levels of components from a parent to a deeply nested child component, which can become tedious and makde the code less readable. Context can help solve this problem by providing a way to share data across components without explicitly passing props through each level.
+
+118) What are some good examples of app-level state suitable for using Context?
+A: Good examples of app-level state include user authentication information, theme settings, and global configuration. These types of state affect multiple components across the application and are not specific to a single view or component.
+
+119) How does Context differ from using `useState` and prop passing?
+A: Context allows data to be shared across components without explicitly passing props through each level, while `useState` with prop passing requires manually passing state and setter functions down the component tree. Context provides a more centralized and less verbose way of managing shared state.
+
+120) What potential drawback does Context introduce when managing state in React?
+A: While Context simplifies state management, it can complicate the maintenance of React applications. Overusing Context can make data flow less explicit and harder to track, potentially leading to more complex and less maintainable code.
+
+121) What hook is used to import context in React?
+A: `useContext`
+
+122) How do you retrieve context from a specific context file?
+A: Use `useContext(ContextName)` and destructure the desired values.
+
+123) What potential issue can arise when using context in React?
+A: It can be difficult to trace where the context is being modified, creating code with unclear data flow and indirection.
+
+124) What problem did React previously have with context and hooks?
+A: Phantom updates and inability to track context modifications correctly, leading to inconsistent UI states.
+
+125)
