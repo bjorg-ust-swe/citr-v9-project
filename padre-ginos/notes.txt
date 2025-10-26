@@ -377,4 +377,44 @@ A: It can be difficult to trace where the context is being modified, creating co
 124) What problem did React previously have with context and hooks?
 A: Phantom updates and inability to track context modifications correctly, leading to inconsistent UI states.
 
-125)
+125) What is the primary focus of TanStack Router compared to React Router?
+A: TanStack Router is very focused on client-side React routing, whereas React Router has equal attention for server-side and client-side routing.
+
+126) What is the significance of the double underscore (dunder) directory in TanStack Router?
+A: The double underscore directory (like "routes/__root.jsx") defines the root route and shared components/code for all routes in the application.
+
+127) What is the purpose of the Outlet component in TanStack Router?
+A: The Outlet component represents the area where different page components will be swapped out and rendered when navigating between routes.
+
+128) What convention does TanStack Router use for lazy-loading routes?
+A: By naming a route file with 'lazy' in the file name (e.g., order-lazy.jsx), TanStack Router will automatically lazy-load that route, loading it only when the user navigates to that specific page.
+
+129) How do TanStack's different packages handle versioning?
+A: TanStack cuts new version of all their packages simultaneously, ensuring compatibility when using the same version number across different packages.
+
+130) What function is used to create a lazy-loaded route in TanStack Router?
+A: `createLazyFileRoute()`
+
+131) Why should developers use the Link component instead of traditional anchor tags?
+A: Link handles routing client-side, manages browser history correctly, and prevents full page reloads.
+
+132) What is the standard export name expected by TanStack Router for defining routes?
+A: `export const route`
+
+133) How does lazy loading impact initial page bundle size?
+A: Lazy loading reduces initial bundle size by loading components only when they are requested, instead of loading all components upfront.
+
+134) What is TanStack Query and what makes it unique?
+A: TanStack Query is a library that simplifies caching API requests across multiple libraries like React, Angular, and Vue. It automates caching logic, handling cache expiry, and hydration without developers needing to write complex caching mechanisms manually.
+
+135) What are the key benefits of using TanStack Query?
+A: TanStack Query simplifies caching API requests, reduces the need for useEffect, handles cache management automaically, allows precaching of data, and provides a consistent approach to managing data fetching and caching across different types of requests.
+
+136) How does TanStack Query handle caching of API responses?
+A: TanStack Query automatically manages caching by checking if data is already available before making a new API request. If cached data exists, it returns the cached version; otherwise, it fetches new data and caches the response for future use.
+
+137) What components are required to setup TanStack Query in a React application?
+A: To setup TanStack Query, you need to install the library, import QueryClient and QueryClientProvider, create a QueryClient instance, and wrap your application with the QueryClientProvider, passing the QueryClient as a prop.
+
+138) What configuration options are available when creating a new QueryClient?
+A: When creating a new QueryClient, you can configure options such as precaching data, setting default options for queries and mutations, managing cache behavior, and handling hydration and dehydration of cached data.
