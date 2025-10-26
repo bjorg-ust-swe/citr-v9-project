@@ -431,4 +431,20 @@ A: React Query's `useQuery` hook provides several boolean states including "isLo
 142) What is the recommended apporach for structuring API requests in React applications?
 A: Create individual functions in a separate API directory for making API requests, which can then be imported and used across the application. This approach works well with state management libraries like TanStack Query and promotes code reusability.
 
-143)
+143) What are the key advantages of using TanStack Query for API requests?
+A: TanStack Query provides built-in caching, elegant hooks, automatic refreshing, improved error handling, and doesn't enforce strict opinions on usage. It simplifies API request management in React components.
+
+144) When might `useEffect` still be preferred over TanStack Query?
+A: `useEffect` is still useful for tasks like interacting with local storage, firing analytics events after component load, or handling side effects that don't involve direct API data fetching.
+
+145) How can you control data refetching behavior in TanStack Query?
+A: By adjusting the 'stale time' parameter. Setting stale time to 0 will cause the query to refetch every time, while other values can control the frequency of data refreshing.
+
+146) When is a state management library like Zustand most appropriate?
+A: For large, complex applications with significant browser-based data that needs to be shared across multiple teams or components, such as Figma.
+
+147) When should query code be placed in a custom hook?
+A: When dealing with multiple complex requests that need to be fired in a specific order or require coordinated management. For a single, simple API request, placing the query directly in the component is often sufficient.
+
+148) What is a recommended approach for organizing React component files?
+A: Create a directory for each component containing related files.
