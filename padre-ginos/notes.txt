@@ -418,3 +418,17 @@ A: To setup TanStack Query, you need to install the library, import QueryClient 
 
 138) What configuration options are available when creating a new QueryClient?
 A: When creating a new QueryClient, you can configure options such as precaching data, setting default options for queries and mutations, managing cache behavior, and handling hydration and dehydration of cached data.
+
+139) What is the purpose of the `queryKey` in TanStack Query?
+A: The `queryKey` is used to identify and store a unqiue query in the cache, allowing TanStack Query to determine wheather to return cached data, fetch fresh data, or check if the cached data is stale.
+
+140) How does the `staleTime` parameter work in TanStack Query?
+A: The `StaleTime` parameter, specified in milliseconds, determines how long cached data remains fresh before being considered stale and potenially refected.
+
+141) What are some boolean states provided by React Query's `useQuery` hook?
+A: React Query's `useQuery` hook provides several boolean states including "isLoading, isSuccess, isFetched, isPaused, isPending, isPlaceholderData, and isRefetchError."
+
+142) What is the recommended apporach for structuring API requests in React applications?
+A: Create individual functions in a separate API directory for making API requests, which can then be imported and used across the application. This approach works well with state management libraries like TanStack Query and promotes code reusability.
+
+143)
